@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">PAYMENT DETAILS</div>
+        {% for row in payment %}
+
+        <div>
+            <td><p align="left"><b>Bill Number: </b> {{row.0}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Phone:</b> {{row.1}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Staff ID:</b> {{row.2}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Product ID:</b> {{row.3}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Payment Type:</b> {{row.4}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Quantity:</b> {{row.5}} </p></td>
+        </div>
+        
+        </br>
+
+        {% endfor %}
+</div>
+          <div class="btn">
+                  <div class="inner"></div>
+                    <a href="{{ url_for ('menu')}}">
+        <button class="button">
+            Go Back
+        </button>
+    </a>
+               </div>
+     </div>
+   </body>
+</html>

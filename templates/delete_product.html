@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">UPDATE PRODUCT</div>
+        <form method="post">
+        <div class="topnav" align="center">
+            <input name ="search" type="text" placeholder="UPDATE stock via PRODUCT ID">
+        </div>
+        <div class="topnav" align="center">
+            <input name ="Qty" type="text" placeholder="QTY">
+        </div>
+            </br>
+        </form>
+        {% for row in product %}
+
+        <div>
+            <td><p><b>Product ID:</b> {{row.0}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Product Name:</b> {{row.1}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Description:</b> {{row.2}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Price:</b> {{row.3}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Quantity:</b> {{row.4}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Supplier ID:</b> {{row.5}} </p></td>
+        </div>
+         <div>
+            <td><p><b>Category ID:</b> {{row.6}} </p></td>
+        </div>
+        </br>
+        <div>
+            <td>
+                {{x}}
+            </td>
+        </div>
+        {% endfor %}
+        
+        <table>
+            <tr>
+              <th>Product ID</th>
+              <th>Product Name</th>
+              <th>Product Description</th>
+              <th>Price</th>
+              <th>QUANTITY</th>
+              <th>Supplier_ID</th>
+              <th>Category_ID</th>
+            </tr>
+            {% for row in pdat %}
+            <tr>
+                <div>
+                    <td>{{row.0}}</td>
+                    <td>  </td>
+                </div>
+                <div>
+                    <td>{{row.1}}</td>
+                </div>
+                <div>
+                    <td>{{row.2}}</td>
+                </div>
+                <div>
+                    <td>{{row.3}}</td>
+                </div>
+                <div>
+                    <td>{{row.4}}</td>
+                </div>
+                <div>
+                    <td>{{row.5}}</td>
+                </div>
+                <div>
+                    <td>{{row.6}}</td>
+                </div>
+            </tr>
+            {% endfor %}
+         </table>
+
+        </div>
+          <div class="btn">
+                  <div class="inner"></div>
+                    <a href="{{ url_for ('menu')}}">
+        <button class="button">
+            Go Back
+        </button>
+    </a>
+               </div>
+
+     </div>
+   </body>
+</html>

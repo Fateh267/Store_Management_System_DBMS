@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">Fill Category Data</div>
+        <form action="#", method = "post">
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "category_id" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Category ID</label>
+              </div>
+           </div>
+
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "category_name" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Category Name</label>
+              </div>
+             <!--<div class="input-data">
+                  <input id = "phone" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Phone</label>-->
+           </div>
+            <div class="form-row">
+              <div class="input-data">
+                 <input name = "c_desc" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Description</label>
+              </div>
+            </div>
+                 <div class="form-row submit-btn">
+                    <div class="input-data">
+                       <div class="inner"></div>
+                       <a href="{{url_for('inventory_menu')}}">
+                       <input type="submit" value="Next">
+                       </a>
+                    </div>
+                 </div>
+        </form>
+     </div>
+   </body>
+</html>

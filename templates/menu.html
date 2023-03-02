@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="static/home.css" />
+  <title>HOME PAGE</title>
+</head>
+
+<body>
+  
+  <!-- HEADER -->
+
+ <header class="header">
+  <nav>
+    <ul>
+        <li><a href="{{ url_for ('supplier')}}">ADD SUPPLIER</a></li>
+        <li><a href="{{ url_for ('category')}}">ADD Category</a></li>
+        <li><a href="{{ url_for ('product')}}">ADD PRODUCT</a></li>
+        <li><a href="{{ url_for ('customer')}}">NEW CUSTOMER</a></li>
+        <li><a href="{{ url_for ('payment')}}">INITIATE PAYMENT</a></li>
+        <li><a href="{{ url_for ('sales_menu')}}">INPUT SALES</a></li>
+        <li><a href="{{ url_for ('view_customer')}}">CUSTOMER DETAILS</a></li>
+        <li><a href="{{ url_for ('view_order')}}">ORDER HISTORY</a></li>
+        <li><a href="{{ url_for ('update_product')}}">UPDATE PRODUCT STOCK</a></li>
+
+    </ul>
+    </nav>
+    <!-- Intro -->
+  </header> 
+  <!-- New Arrivals -->
+   <head>
+      <meta charset="utf-8">
+      <title>Admin Menu</title>
+      <link rel="stylesheet" href="/static/menu.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+   </body>
+</html>

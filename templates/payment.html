@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">Fill Billing Details</div>
+        <form action="#", method="post">
+            <div class="form-row">
+               <div class="input-data">
+                  <input name = "bill_number" type="text" required>
+                  <div class="underline"></div>
+                  <label >Bill Number</label>
+               </div>
+               
+               <div class="input-data">
+                  <input name = "phone" type="text" required>
+                  <div class="underline"></div>
+                  <label >Customer Phone No</label>
+               </div>
+               <div class="input-data">
+                  <input name = "Staff_ID" type="text" required>
+                  <div class="underline"></div>
+                  <label >Staff ID</label>
+               </div>
+               <div class="input-data">
+                  <input name = "Product_ID" type="text" required>
+                  <div class="underline"></div>
+                  <label >Product ID</label>
+               </div>
+               <div class="input-data">
+                  <input name = "Payment_Type" type="text" required>
+                  <div class="underline"></div>
+                  <label >Payment Type</label>
+               </div>
+               <div class="input-data">
+                  <input name = "Quantity" type="text" required>
+                  <div class="underline"></div>
+                  <label >Quantity</label>
+               </div>
+
+            </div>
+            <br />
+            <div class="form-row submit-btn">
+               <div class="input-data">
+                  <div class="inner"></div>
+                  <input type="submit" value="Next">
+               </div>
+            </div>
+         </form>
+        <br />
+        <div class="center">
+         <div class="btn">
+            <div class="inner"></div>
+            <a href="{{ url_for ('total')}}">
+               <button class="button">
+                  total
+               </button>
+            </a>
+         </div>
+     </div>
+   </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">Fill Customer Info</div>
+        {% for row in customer %}
+       <td>{{row.0}}</td>
+       <td>{{row.1}}</td>
+       <td>{{row.2}}</td>
+       <td>{{row.3}}</td>
+       <td>{{row.4}}</td>
+       <td>{{row.5}}</td>
+       <td>{{row.6}}</td>
+        {% endfor %}
+
+     </div>
+   </body>
+</html>

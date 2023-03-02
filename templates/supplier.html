@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">Fill Supplier Data</div>
+        <form action="#", method = "post">
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "supplier_name" type="text" required>
+                 <div class="underline"></div>
+                 <label >Supplier Name</label>
+              </div>
+              <div class="input-data">
+                 <input name = "supplier_id" type="text" required>
+                 <div class="underline"></div>
+                 <label>Supplier ID</label>
+              </div>
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "email" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Email Address</label>
+              </div>
+              <div class="input-data">
+                 <input name = "phone" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Phone</label>
+              </div>
+
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "address" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Address</label>
+              </div>
+           </div>
+           <!--<div class="form-row">
+              <div class="input-data">
+                 <input name = "address" type="text" required>
+                 <div class="underline"></div>
+                 <label for=""> Address</label>
+                 </br>
+              <div name = "address" class="input-data textarea">
+                 <textarea rows="8" cols="80" required></textarea>
+                 <div class="underline"></div>
+                 <label for="">Address</label>
+                 <br />-->
+                 <div class="form-row submit-btn">
+                    <div class="input-data">
+                       <div class="inner"></div>
+                       <a href="{{url_for('inventory_menu')}}">
+                       <input type="submit" value="Next">
+                       </a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </form>
+     </div>
+   </body>
+</html>

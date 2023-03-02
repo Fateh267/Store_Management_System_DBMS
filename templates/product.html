@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">Fill Product Data</div>
+        <form action="#", method = "post">
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "product_id" type="text" required>
+                 <div class="underline"></div>
+                 <label >Product ID</label>
+              </div>
+
+              <div class="input-data">
+                 <input name = "product_name" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Product Name</label>
+              </div>
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "price" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Product Price</label>
+              </div>
+              <div class="input-data">
+                 <input name = "quantity" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Stock</label>
+              </div>
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "supplier_id" type="text" required>
+                 <div class="underline"></div>
+                 <label >Supplier ID</label>
+              </div>
+              <div class="input-data">
+                 <input name = category_id type="text" required>
+                 <div class="underline"></div>
+                 <label >Category ID</label><p></p>
+              </div>
+              </div>
+               <div class="form-row">
+              <div class="input-data">
+                 <input name = "p_desc" type="text" required>
+                 <div class="underline"></div>
+                 <label >Description</label>
+              </div>
+               </div>
+
+                 <div class="form-row submit-btn">
+                    <div class="input-data">
+                       <div class="inner"></div>
+                       <input type="submit" value="Next">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </form>
+     </div>
+
+     <div class="container">
+      <table>
+         <tr>
+           <th>Product ID</th>
+           <th>Product Name</th>
+         </tr>
+         {% for row in pdata %}
+         <tr>
+             <div>
+                 <td>{{row.0}}</td>
+             </div>
+             <div>
+                 <td>{{row.1}}</td>
+             </div>
+         </tr>
+         {% endfor %}
+      </table>
+      <table>
+         <tr>
+           <th>Supplier ID</th>
+           <th>Supplier Name</th>
+         </tr>
+         {% for row in sdata %}
+         <tr>
+             <div>
+                 <td>{{row.0}}</td>
+             </div>
+             <div>
+                 <td>{{row.1}}</td>
+             </div>
+         </tr>
+         {% endfor %}
+      </table>
+      <table>
+         <tr>
+           <th>Category ID</th>
+           <th>Category Name</th>
+           <th>Category Description</th>
+         </tr>
+         {% for row in cdata %}
+         <tr>
+             <div>
+                 <td>{{row.0}}</td>
+             </div>
+             <div>
+                 <td>{{row.1}}</td>
+             </div>
+             <div>
+               <td>{{row.2}}</td>
+           </div>
+         </tr>
+         {% endfor %}
+      </table>
+     </div>
+   </body>
+</html>

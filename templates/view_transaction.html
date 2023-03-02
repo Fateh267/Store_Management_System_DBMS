@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">SEE TRANSACTIONS</div>
+        <form method="post">
+        <div class="topnav" align="center">
+            <input name ="Bill" type="text" placeholder="Search via Bill No">
+        </div>
+            </br>
+        </form>
+        <table>
+            <tr>
+              <th>Product ID</th>
+              <th>QUANTITY</th>
+              <th>PAYMENT TYPE</th>
+              <th>QUANTITY</th>
+            </tr>
+        {% for row in pdata %}
+
+        <div>
+            <td>{{row.0}}</td>
+        </div>
+        <div>
+            <td>{{row.1}}</td>        
+        </div>
+        <div>
+            <td>{{row.2}}</td>        
+        </div>
+        <div>
+            <td>{{row.3}}</td>        
+        </div>
+        {% endfor %}
+        </table>
+        
+        {% for i in data22 %}
+        <div class="text">Bill No:{{ i.0 }} </div>
+        <div class="text">Phone No:{{ i.1 }} </div>
+        {% endfor %}
+        </div>
+          <div class="btn">
+                  <div class="inner"></div>
+                    <a href="{{ url_for ('menu')}}">
+        <button class="button">
+            Go Back
+        </button>
+    </a>
+               </div>
+     </div>
+   </body>
+</html>

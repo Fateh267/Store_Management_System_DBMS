@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">BROWSE CUSTOMER RECORDS</div>
+        <form method="post">
+        <div class="topnav" align="center">
+            <input name ="phone" type="text" placeholder="Search via Phone No">
+        </div>
+            </br>
+        </form>
+        {% for row in customer %}
+
+        <div>
+            <td><p><b>Phone:</b> {{row.0}} </p></td>
+        </div>
+        <div>
+            <td><p><b>First Name:</b> {{row.1}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Last Name:</b> {{row.2}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Address:</b> {{row.3}} </p></td>
+        </div>
+        <div>
+            <td><p><b>Email:</b> {{row.4}} </p></td>
+        </div>
+        </br>
+
+        {% endfor %}
+        </div>
+          <div class="btn">
+                  <div class="inner"></div>
+                    <a href="{{ url_for ('menu')}}">
+        <button class="button">
+            Go Back
+        </button>
+    </a>
+               </div>
+     </div>
+   </body>
+</html>
